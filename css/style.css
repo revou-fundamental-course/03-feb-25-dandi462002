@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #242424;
+  color: #00ffff;
+  font-size: 1.2em;
+}
+
+.container {
+  border: 1px solid #00ffff;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+.paragraph {
+  text-align: center;
+  background: rgb(42, 41, 41);
+  border: 1px solid #00ffff;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 0.5em;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #00ffff;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #00cccc;
+}
+
+.inputBox {
+  width: 100%;
+  height: 3em;
+  position: relative;
+  margin: 15px 0;
+}
+
+.formInput {
+  width: 100%;
+  height: 100%;
+  background: #242424;
+  border: 2px solid #00ffff;
+  border-radius: 0.5em;
+  outline: none;
+  color: #00ffff;
+  padding: 0 10px;
+  font-size: 1em;
+
+}
+
+/* Posisi Awal Label */
+label {
+  position: absolute;
+  background: #242424;
+  color: #00ffff;
+  left: 1em;
+  top: 0.65em;
+  cursor: text;
+  transition: top 250ms ease-in-out, font-size 250ms ease-in-out,
+    padding 250ms ease-in-out, color 250ms ease-in-out;
+  border-left: none; 
+  border-right: none;
+  white-space: nowrap; 
+  display: inline; 
+}
+
+.label {
+    position: absolute;
+    background: #242424;
+    color: #00ffff;
+    left: 1em;
+    top: -0.5em; 
+    font-size: 0.85em; 
+    padding: 0 3px;
+    display: inline-block; 
+}
+
+/* Efek Saat Input Fokus atau Berisi */
+.formInput:focus + label,
+.formInput:not(:placeholder-shown) + label {
+  top: -0.5em;
+  font-size: 0.85em;
+  padding: 0 0.5em;
+  color: #00ffff;
+}
+
+/* Efek Hover dan Fokus */
+.formInput:hover {
+  border: 2px solid #00ffff;
+}
+.formInput:focus {
+  border: 2px solid #00ffff;
+}
+
+.suhu {
+    font-style: italic;
+  }
+  .angka {
+    font-size: 1.3em;
+  }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
     <title>Dandi Darmansyah</title>
   </head>
   <body>
@@ -11,27 +12,38 @@
     <main>
       <div class="container">
         
-        <div class="main-body">
-          <p>
-            Masukkan suhu derajat Celsius (&degC) ke kotak dibawah, lalu klik
-            tombol Konversi untuk mendapatkan hasil konversi dalam bentuk
-            Fahrenheit (&degF).
-          </p>
-          <p>Celcius (&degC):</p>
-          <input type="number" placeholder="Massukkan Suhu Celcius" />
+          <div class="inputBox" >
+            <input
+              type="number"
+              required class="formInput" placeholder=" " autocomplete="off" id="celcius" 
+            />
+            <label id="labelCelcius" for="celcius">Celcius (&degC)</label>
+          </div>
+
           <div class="button-group">
-          <button >Konversi</button>
-          <button >Reset</button>
-          <button >Reverse</button>
+            <button onclick="konversi()">Konversi</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="reverse()">Reverse</button>
+          </div>
+
+          <div class="inputBox" >
+            <input
+            type="number"
+             required class="formInput" placeholder=" " autocomplete="off" id="fahrenheit"
+          />
+          <label class="label" id="labelFahrenheit" for="fahrenheit">Fahrenheit (&degF)</label>
         </div>
 
-          <p>Fahrenheit (&degF):</p>
-          <input type="number" placeholder="Hasil Suhu Fahrenheit" />
-          <p>Cara Kalkulasi</p>
-          <input type="text" placeholder="Rumus Kalkulasi" disabled />
+        <div class="inputBox" id="kalkulasi">
+          <input type="text" required class="formInput" placeholder=" " autocomplete="off" disabled/>
+          <label id="labelKalkulasi" class="label">Cara Kalkulasi</label>
         </div>
+
+     <div class="paragraph">
         <span>Fahrenheit ke Celcius</span>
-        <h3 class="judul">Cara Konversi dari Celcius (&degC) ke Fahrenheit (&degF)</h3>
+        <h3 class="judul">
+          Cara Konversi dari Celcius (&degC) ke Fahrenheit (&degF)
+        </h3>
         <hr />
         <p>
           Suhu <span class="suhu">S</span> dalam derajat Fahrenheit (&degF) sama
@@ -39,15 +51,21 @@
           kali <span class="angka">9/5</span> tambah
           <span class="angka">32</span>.
         </p>
-        <p>
-            <span class="suhu">S</span><sub>(&degF)</sub>=
-            <span class="angka">(<span class="suhu">S</span><sub>(&degF)</sub>x 9/5) + 32</span>  
+        <p id="pCelcius">
+          <span class="suhu">S</span><sub>(&degC)</sub>=
+          <span class="angka"
+            >(<span class="suhu">S</span><sub>(&degF)</sub>x 9/5) + 32</span
+          >
         </p>
         <p>atau</p>
-        <p>
+        <p id="pFahrenheit">
           <span class="suhu">S</span><sub>(&degF)</sub>=
-          <span class="angka">(<span class="suhu">S</span><sub>(&degF)</sub>x 1.8) + 32</span>
+          <span class="angka"
+            >(<span class="suhu">S</span><sub>(&degC)</sub>- 32) + 32</span
+          >
         </p>
+      </div>
+        <script src="js/index.js"></script>
       </div>
     </main>
     <footer></footer>
