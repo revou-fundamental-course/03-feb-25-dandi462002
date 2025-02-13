@@ -80,3 +80,4 @@ function reverse() {
 // Atur keadaan awal: Celcius aktif, Fahrenheit nonaktif
 document.getElementById("celcius").disabled = false;
 document.getElementById("fahrenheit").disabled = true;
+"// code" 
