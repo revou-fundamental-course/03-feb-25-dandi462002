@@ -8,14 +8,6 @@ let labelFahrenheit = document.getElementById("labelFahrenheit");
 let celciusToFahrenheit = true;
 let isReversed = false;
 
-function convertCelciusToFahrenheit(celsius) {
-    return (celsius * 9) / 5 + 32;
-}
-
-function convertFahrenheitToCelcius(fahrenheit) {
-    return ((fahrenheit - 32) * 5) / 9;
-}
-
 function konversi() {
     const formValue = parseFloat(celcius.value);
     if (isNaN(formValue)) {
@@ -37,6 +29,14 @@ function konversi() {
     fahrenheit.value = hasilKonversi;
     kalkulasi.value = kalkulasiForm;
 }
+function convertCelciusToFahrenheit(celsius) {
+    return (celsius * 9) / 5 + 32;
+}
+
+function convertFahrenheitToCelcius(fahrenheit) {
+    return ((fahrenheit - 32) * 5) / 9;
+}
+
 
 function reset() {
 	celcius.value = "";
